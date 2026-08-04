@@ -1,0 +1,56 @@
+/* RESET */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    font-family:'Inter',sans-serif;
+
+    background:#F2F4F7;
+
+    color:#0E1726;
+
+}
+
+/* THEME */
+
+:root{
+
+    /* COLORS */
+
+    --bg-dark:#0E1726;
+
+    --bg-light:#F2F4F7;
+
+    --primary:#C9932F;
+
+    --primary-hover:#D8A53A;
+
+    --text-dark:#0E1726;
+
+    --text-light:#F2F4F7;
+
+    --muted:#8D97A8;
+
+    --border:#D9DEE7;
+
+    --shadow:
+        0 20px 45px rgba(0,0,0,.08);
+
+    /* FONTS */
+
+    --heading:'Space Grotesk',sans-serif;
+
+    --body:'Inter',sans-serif;
+
+    --mono:'IBM Plex Mono',monospace;
+
+}

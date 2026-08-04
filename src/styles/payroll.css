@@ -1,0 +1,433 @@
+/* src/styles/payroll.css */
+
+.payroll-page {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* ================= HEADER ================= */
+
+.payroll-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.payroll-title h2 {
+  margin: 0;
+  font-size: 28px;
+  color: #1f2937;
+}
+
+.payroll-title p {
+  margin-top: 6px;
+  color: #6b7280;
+  font-size: 15px;
+}
+
+.payroll-header-actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.payroll-btn {
+  border: none;
+  cursor: pointer;
+  border-radius: 8px;
+  padding: 10px 18px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: white;
+  font-weight: 600;
+  transition: .3s;
+}
+
+.add-btn {
+  background: #2563eb;
+}
+
+.export-btn {
+  background: #059669;
+}
+
+.refresh-btn {
+  background: #f59e0b;
+}
+
+.payroll-btn:hover {
+  opacity: .9;
+}
+
+/* ================= STATS ================= */
+
+.payroll-stats {
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  gap: 20px;
+}
+
+.payroll-stat-card {
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  box-shadow: 0 2px 10px rgba(0,0,0,.08);
+}
+
+.payroll-stat-icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  font-size:24px;
+  color:white;
+}
+
+.employees-card .payroll-stat-icon{
+  background:#2563eb;
+}
+
+.payroll-card .payroll-stat-icon{
+  background:#10b981;
+}
+
+.paid-card .payroll-stat-icon{
+  background:#22c55e;
+}
+
+.pending-card .payroll-stat-icon{
+  background:#f59e0b;
+}
+
+.payroll-stat-content h4{
+  margin:0;
+  color:#6b7280;
+}
+
+.payroll-stat-content h2{
+  margin-top:6px;
+}
+
+/* ================= FILTER ================= */
+
+.payroll-filter{
+  display:grid;
+  grid-template-columns:2fr repeat(3,1fr) auto;
+  gap:15px;
+}
+
+.payroll-search{
+  position:relative;
+}
+
+.search-icon{
+  position:absolute;
+  left:15px;
+  top:50%;
+  transform:translateY(-50%);
+  color:#777;
+}
+
+.payroll-search input{
+  width:100%;
+  padding:12px 15px 12px 45px;
+}
+
+.payroll-filter input,
+.payroll-filter select{
+  border:1px solid #ddd;
+  border-radius:8px;
+  padding:12px;
+  font-size:14px;
+}
+
+.clear-filter-btn{
+  border:none;
+  background:#ef4444;
+  color:white;
+  border-radius:8px;
+  cursor:pointer;
+  padding:12px 18px;
+}
+
+/* ================= TABLE ================= */
+
+.payroll-table-container{
+  background:white;
+  border-radius:12px;
+  overflow:auto;
+  box-shadow:0 2px 10px rgba(0,0,0,.08);
+}
+
+.payroll-table{
+  width:100%;
+  border-collapse:collapse;
+}
+
+.payroll-table th{
+  background:#2563eb;
+  color:white;
+  padding:15px;
+  white-space:nowrap;
+}
+
+.payroll-table td{
+  padding:15px;
+  border-bottom:1px solid #eee;
+}
+
+.payroll-table tr:hover{
+  background:#f9fafb;
+}
+
+/* ================= STATUS ================= */
+
+.status-paid{
+  background:#dcfce7;
+  color:#166534;
+  padding:6px 12px;
+  border-radius:20px;
+  font-size:13px;
+  font-weight:600;
+}
+
+.status-pending{
+  background:#fef3c7;
+  color:#92400e;
+  padding:6px 12px;
+  border-radius:20px;
+  font-size:13px;
+  font-weight:600;
+}
+
+/* ================= ACTION BUTTONS ================= */
+
+.action-buttons{
+  display:flex;
+  gap:8px;
+  justify-content:center;
+}
+
+.action-buttons button{
+  width:38px;
+  height:38px;
+  border:none;
+  border-radius:8px;
+  color:white;
+  cursor:pointer;
+}
+
+.view-btn{
+  background:#2563eb;
+}
+
+.edit-btn{
+  background:#10b981;
+}
+
+.delete-btn{
+  background:#ef4444;
+}
+
+.payslip-btn{
+  background:#7c3aed;
+}
+
+/* ================= PAGINATION ================= */
+
+.payroll-pagination{
+  display:flex;
+  justify-content:center;
+  gap:10px;
+}
+
+.pagination-btn{
+  width:40px;
+  height:40px;
+  border:none;
+  border-radius:8px;
+  cursor:pointer;
+}
+
+.active-page{
+  background:#2563eb;
+  color:white;
+}
+
+/* ================= MODAL ================= */
+
+.modal-overlay{
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,.45);
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  z-index:1000;
+}
+
+.payroll-modal,
+.payslip-modal{
+  background:white;
+  width:95%;
+  max-width:1100px;
+  max-height:92vh;
+  overflow:auto;
+  border-radius:14px;
+}
+
+.modal-header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:20px;
+  border-bottom:1px solid #eee;
+}
+
+.close-btn{
+  border:none;
+  background:none;
+  cursor:pointer;
+  font-size:20px;
+}
+
+.payroll-form{
+  padding:25px;
+}
+
+.form-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:18px;
+}
+
+.form-group{
+  display:flex;
+  flex-direction:column;
+}
+
+.form-group label{
+  margin-bottom:8px;
+  font-weight:600;
+}
+
+.form-group input,
+.form-group select{
+  padding:11px;
+  border:1px solid #ddd;
+  border-radius:8px;
+}
+
+.form-group small{
+  color:#ef4444;
+  margin-top:5px;
+}
+
+.salary-box input{
+  background:#f3f4f6;
+  font-weight:bold;
+}
+
+.modal-footer{
+  margin-top:25px;
+  display:flex;
+  justify-content:flex-end;
+  gap:12px;
+}
+
+.cancel-btn,
+.save-btn,
+.print-btn,
+.download-btn{
+  border:none;
+  cursor:pointer;
+  padding:12px 22px;
+  border-radius:8px;
+  color:white;
+  display:flex;
+  align-items:center;
+  gap:8px;
+}
+
+.cancel-btn{
+  background:#6b7280;
+}
+
+.save-btn{
+  background:#2563eb;
+}
+
+.print-btn{
+  background:#10b981;
+}
+
+.download-btn{
+  background:#7c3aed;
+}
+
+.payslip-content{
+  padding:25px;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media(max-width:1200px){
+
+.payroll-stats{
+grid-template-columns:repeat(2,1fr);
+}
+
+.form-grid{
+grid-template-columns:repeat(2,1fr);
+}
+
+}
+
+@media(max-width:768px){
+
+.payroll-header{
+flex-direction:column;
+align-items:flex-start;
+}
+
+.payroll-header-actions{
+width:100%;
+}
+
+.payroll-btn{
+flex:1;
+justify-content:center;
+}
+
+.payroll-filter{
+grid-template-columns:1fr;
+}
+
+.payroll-stats{
+grid-template-columns:1fr;
+}
+
+.form-grid{
+grid-template-columns:1fr;
+}
+
+.action-buttons{
+flex-wrap:wrap;
+}
+
+.payroll-modal,
+.payslip-modal{
+width:98%;
+}
+
+}
